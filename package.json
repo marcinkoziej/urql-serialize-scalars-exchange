@@ -36,6 +36,7 @@
   },
   "name": "urql-serialize-scalars-exchange",
   "author": "Marcin Koziej",
+  "homepage": "https://github.com/marcinkoziej/urql-serialize-scalars-exchange",
   "module": "dist/urql-serialize-scalars-exchange.esm.js",
   "size-limit": [
     {
