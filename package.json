@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -19,8 +19,7 @@
     "size": "size-limit",
     "analyze": "size-limit --why"
   },
-  "peerDependencies": {
-  },
+  "peerDependencies": {},
   "dependencies": {
     "@urql/core": "^2.1.2"
   },
@@ -50,11 +49,11 @@
   ],
   "devDependencies": {
     "@size-limit/preset-small-lib": "^4.11.0",
+    "graphql": "^15.5.0",
     "husky": "^6.0.0",
     "size-limit": "^4.11.0",
     "tsdx": "^0.14.1",
     "tslib": "^2.2.0",
-    "typescript": "^4.2.4",
-    "graphql": "^15.5.0"
+    "typescript": "^4.2.4"
   }
 }
