@@ -22,14 +22,14 @@ const allFieldTypes = (typesMap : ObjectFieldTypes, curType: string | string[]) 
   if (curType instanceof Array) {
     return curType.map(t => typesMap[t]).reduce((a, x) => Object.assign(a,x), {});
   } else {
-    return typesMap[curType];
+    return typesMap[curType] || {};
   }
 };
 
 const objectTypename = (data : any) : string | undefined => {
   let p : ObjectWithTypename = data;
-  if (data instanceof Array) p = data[0];
-  if (p.__typename) return p.__typename;
+  if (p instanceof Array) p = p[0];
+  if (p instanceof Object && p.__typename) return p.__typename;
   return;
 }
 
