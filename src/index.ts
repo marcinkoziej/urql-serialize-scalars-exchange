@@ -28,7 +28,10 @@ const allFieldTypes = (typesMap : ObjectFieldTypes, curType: string | string[]) 
 
 const objectTypename = (data : any) : string | undefined => {
   let p : ObjectWithTypename = data;
-  if (p instanceof Array) p = p[0];
+  if (p instanceof Array) {
+    if (p.length > 0) p = p[0];
+    else return;
+  }
   if (p instanceof Object && p.__typename) return p.__typename;
   return;
 }
