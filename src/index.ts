@@ -97,7 +97,7 @@ const createSerializeScalarsExchange = (
 ): Exchange => ({ forward }) => {
 
   const serializeArgs = (op: Operation): Operation => {
-    if (op.kind !== 'query') return op;
+    if (op.kind !== 'query' && op.kind !== 'mutation') return op;
 
     for (const def of op.query.definitions) {
       if (def.kind === 'OperationDefinition' && def.variableDefinitions) {
