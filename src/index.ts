@@ -124,8 +124,8 @@ const createSerializeScalarsExchange = (
   const deserializeResult = (op: OperationResult): OperationResult => {
     if (
       op.data === null ||
-      op.data === undefined ||
-      op.operation.kind !== 'query'
+        op.data === undefined ||
+        !(op.operation.kind === 'query' || op.operation.kind === 'mutation')
     )
       return op;
 
