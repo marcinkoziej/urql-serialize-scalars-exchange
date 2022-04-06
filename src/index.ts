@@ -113,6 +113,9 @@ const createSerializeScalarsExchange = (
               serializers
             );
           }
+          if (typeName in serializers) {
+            op.variables[varName] = serializers[typeName].serialize(op.variables[varName])
+          }
         }
       }
     }
